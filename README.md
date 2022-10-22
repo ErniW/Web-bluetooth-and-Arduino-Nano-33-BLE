@@ -15,6 +15,6 @@ An example of using Web Bluetooth API with Arduino BLE board.
 - *Web Bluetooth can't initialize connection on its own. It must be triggered by user event. In this case - pressing a HTML button.*
 - *Tested on Google Chrome desktop and mobile with Arduino Nano 33 BLE, may work with different compatible browser/Arduino combinations.*
 - *Please notice that Web Bluetooth won't work on IOS.*
-- *To send float type characteristics with Arduino BLE library, conversion to little-endian is required to correctly read the values. (`event.target.value.getFloat32(0, true);`)*
+- *To receive float type characteristics from Arduino BLE library, conversion to little-endian is required to correctly read the values. (`event.target.value.getFloat32(0, true);`)*
 - *`parseFloat(y.toFixed(2));` rounds the float to 2 decimal numbers. I tried to exactly match the values from Arduino and Javascript sides.*
 - *Writing to characteristic requires conversion to ArrayBuffer.*
