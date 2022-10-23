@@ -1,0 +1,36 @@
+body{
+    background: rgb(242,242,242);;
+    font-family: sans-serif;
+}
+
+main{
+    background: white;
+    max-width: 360px;
+    padding: 20px;
+    margin: 80px auto;
+    border-radius: 20px;
+}
+
+main > * {
+    display: flex;
+}
+
+.buttons{
+    justify-content: space-between; 
+    margin-bottom: 40px;  
+}
+
+.labels{
+    justify-content: space-around;
+}
+
+.values{
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.values > span{
+    width:100px;
+    font-size: 36px;
+    text-align: center;
+}
