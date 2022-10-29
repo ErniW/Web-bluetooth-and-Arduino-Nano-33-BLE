@@ -11,7 +11,7 @@ const zCharacteristicUUID = "19b10003-e8f2-537e-4f6c-d104768a1214";
 
 const ledCharacteristicUUID = "19b10004-e8f2-537e-4f6c-d104768a1214";
 
-async function getDevice(){
+async function connect(){
 
     const device = await navigator.bluetooth.requestDevice({filters: [{services: [serviceUUID]}]});
     const server = await device.gatt.connect();
@@ -61,5 +61,5 @@ async function toggleLED(){
     await ledCharacteristic.writeValue(view);
 }
 
-document.getElementById('start').addEventListener("click", getDevice);
+document.getElementById('connect').addEventListener("click", connect);
 document.getElementById('led').addEventListener("click", toggleLED);
